@@ -31,3 +31,21 @@
         <div class="col-md-8"></div>
     </div>
 </div>
+<button class="btn btn-primary" (click)="getTheProducts()">
+    Data
+</button>
+<div class="container my-5">
+    <div class="row">
+        <ng-container *ngFor="let data of products">
+            <div class="col-md-3">
+                <h2 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;max-width: 100ch;">
+                    {{data?.title}}
+                </h2>
+                <img [src]="data.images" class="img-fluid">
+                <p style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;max-width: 100ch;">
+                    {{data?.description}}</p>
+                <p><b>Price</b> {{data?.price}}</p>
+            </div>
+        </ng-container>
+    </div>
+</div>
