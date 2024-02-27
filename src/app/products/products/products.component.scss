@@ -3,3 +3,30 @@ img {
     height: 100px;
     max-width: 150px;
 }
+
+p {
+    margin-bottom: 8px;
+}
+
+.apiImg {
+    max-width: 250px;
+    min-height: 250px;
+    width: 250px;
+}
+
+.showPro {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    background: #f7f7f7;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.proDetails p {
+    background: #f7f7f7;
+    padding: 1rem;
+    border-radius: 4px;
+}

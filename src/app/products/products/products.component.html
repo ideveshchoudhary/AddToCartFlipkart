@@ -1,6 +1,6 @@
 <div class="container my-5">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 mx-auto">
             <div class="row">
                 <div class="col-md-3">
                     <a href=""><img
@@ -31,20 +31,24 @@
         <div class="col-md-8"></div>
     </div>
 </div>
-<button class="btn btn-primary" (click)="getTheProducts()">
-    Data
-</button>
+
 <div class="container my-5">
     <div class="row">
+        <div class="col-12 proDetails">
+            <p>All Proudcts</p>
+        </div>
         <ng-container *ngFor="let data of products">
-            <div class="col-md-3">
-                <h2 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;max-width: 100ch;">
-                    {{data?.title}}
-                </h2>
-                <img [src]="data.images" class="img-fluid">
-                <p style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;max-width: 100ch;">
-                    {{data?.description}}</p>
-                <p><b>Price</b> {{data?.price}}</p>
+            <div class="col-md-3 my-3">
+                <div class="showPro">
+                    <img [src]="data.image" class="img-fluid apiImg">
+                    <h5 style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;max-width: 20ch;">
+                        {{data?.title}}
+                    </h5>
+                    <p style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;max-width: 40ch;">
+                        {{data?.description}}</p>
+                    <p><b>Price</b> ₹{{data?.price}}</p>
+                    <button class="btn btn-primary">Add to cart</button>
+                </div>
             </div>
         </ng-container>
     </div>

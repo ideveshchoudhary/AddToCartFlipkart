@@ -12,15 +12,14 @@ export class ProductsComponent implements OnInit {
 
   }
   ngOnInit(): void {
-
+    this.getTheProducts()
   }
 
   getTheProducts() {
     this.service.getAllProducts().subscribe((res: any) => {
       this.products = res;
       console.log("Api wroking", this.products);
-    }
-    )
+    })
   }
 
 

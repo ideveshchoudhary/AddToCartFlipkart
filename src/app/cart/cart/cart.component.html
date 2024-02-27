@@ -1,1 +1,59 @@
-<p>cart works!</p>
+<ng-container *ngIf="true">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-responisve table-stripped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Sr. No</th>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Quanitity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>aa</td>
+                            <td>a</td>
+                            <td>fddfsf</td>
+                            <td>fdffd</td>
+                            <td>fdfd</td>
+                            <td>fdfd</td>
+                            <td><button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+
+<ng-container *ngIf="false">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 border-dark ">
+                <div class="cart rounded-3">
+                    <span style="font-size: 1.5rem; font-weight: 600; padding: 0 2rem; display: inline-block;">My
+                        Cart</span>
+                    <div class="row h-100">
+                        <div class="col-md-4 mx-auto text-center"
+                            style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <img src="https://autotechengineeringusa.com/sites/default/files/cart-empty.png"
+                                class="img-fluid">
+                            <h5>Your cart is empty</h5>
+                            <p>Add item for empty cart</p>
+                            <a routerLink="/products"><button class="btn btn-primary">Shop Now</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
