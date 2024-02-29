@@ -18,6 +18,7 @@ export class CartService {
     this.cartItemList.push(...product);
     this.productList.next(product);
   }
+  // For Add to cart means adding the product to cart
   addtoCart(product: any) {
     this.cartItemList.push(product);
     this.productList.next(this.cartItemList);

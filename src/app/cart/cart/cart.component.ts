@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiServiceService } from 'src/app/services/api-service.service';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -8,31 +9,17 @@ import { ApiServiceService } from 'src/app/services/api-service.service';
 })
 export class CartComponent implements OnInit {
   cartproudcts: any[] = [];
-  constructor(private service: ApiServiceService) {
+  grandTotal: number = 0;
+  constructor(private cart: CartService) {
 
   }
   ngOnInit(): void {
-    this.getCartProduct()
-  }
-
-  // getCartProduct() {
-  //   this.service.getAllProducts().subscribe((res: any) => {
-  //     this.cartproudcts = res;
-  //     console.log("cart products", this.cartproudcts);
-
-  //   })
-  // }
-  getCartProduct() {
-    this.service.getAllProducts().subscribe({
-      next: (res: any) => {
+    this.cart.getProducts()
+      .subscribe(res => {
         this.cartproudcts = res;
-        console.log("api cart", this.cartproudcts);
-      },
-      error: (error: any) => {
-        console.log("error fetching", error);
-
-      }
-    })
+        this.grandTotal = this.cart.getTotalPrice();
+      })
   }
+
 
 }

@@ -47,7 +47,7 @@
                     <p style="white-space:nowrap;text-overflow: ellipsis;overflow: hidden;max-width: 40ch;">
                         {{data?.description}}</p>
                     <p><b>Price</b> ₹{{data?.price}}</p>
-                    <button class="btn btn-primary">Add to cart</button>
+                    <button class="btn btn-primary" (click)="addToCart(data)">Add to cart</button>
                 </div>
             </div>
         </ng-container>

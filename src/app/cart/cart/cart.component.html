@@ -16,14 +16,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>aa</td>
-                            <td>a</td>
-                            <td>fddfsf</td>
-                            <td>fdffd</td>
-                            <td>fdfd</td>
-                            <td>fdfd</td>
+                        <tr *ngFor="let data of cartproudcts; let i = index;">
+                            <td>{{i + 1}}</td>
+                            <td>{{data.title}}</td>
+                            <td>{{data.image}}</td>
+                            <td>{{data.description}}</td>
+                            <td>{{data.price}}</td>
+                            <td>{{data.quantity}}</td>
+                            <td>{{data.total}}</td>
                             <td><button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button></td>
                         </tr>
                     </tbody>
