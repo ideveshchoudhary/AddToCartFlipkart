@@ -1,4 +1,4 @@
-<ng-container *ngIf="true">
+<ng-container *ngIf="cartproudcts.length !=0">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -19,15 +19,20 @@
                         <tr *ngFor="let data of cartproudcts; let i = index;">
                             <td>{{i + 1}}</td>
                             <td>{{data.title}}</td>
-                            <td>{{data.image}}</td>
+                            <td><img src="{{data.image}}" class="img-fluid" style="height: 100px;"></td>
                             <td>{{data.description}}</td>
                             <td>{{data.price}}</td>
                             <td>{{data.quantity}}</td>
                             <td>{{data.total}}</td>
-                            <td><button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button></td>
+                            <td><button class="btn btn-danger" (click)="removeSingleItem(data)"><i class="fa-solid fa-trash"></i></button></td>
                         </tr>
                     </tbody>
                 </table>
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-danger" (click)="removeAllItems()">Delete All</button>
+                    <p class="ms-3">Grand Total <span>{{grandTotal.toFixed(2)}}</span></p>
+                    
+                </div>
             </div>
         </div>
     </div>
@@ -35,7 +40,7 @@
 
 
 
-<ng-container *ngIf="false">
+<ng-container *ngIf="cartproudcts.length == 0">
     <div class="container">
         <div class="row">
             <div class="col-12 border-dark ">

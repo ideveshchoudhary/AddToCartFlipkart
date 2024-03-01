@@ -20,6 +20,13 @@ export class CartComponent implements OnInit {
         this.grandTotal = this.cart.getTotalPrice();
       })
   }
+  removeSingleItem(data: any) {
+    this.cart.removeCartItem(data);
+  }
 
+  removeAllItems() {
+    alert("Do you really want to delete all items?")
+    this.cart.removeAllCart();
+  }
 
 }
